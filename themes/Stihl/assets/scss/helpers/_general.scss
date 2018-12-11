@@ -1,0 +1,250 @@
+@import 'helpers/mixins';
+
+.map.box-background {
+  height: auto;
+  border-radius: 8px;
+  iframe {
+    width: 100%;
+    height: 440px;
+  }
+}
+
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  li {
+    & + li {
+      margin-left: 1rem;
+    }
+  }
+  a, span {
+    background-color: #f37703;
+    border: 1px solid #e4e4e4;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    &:hover,
+    &:focus, &.current {
+      box-shadow: none;
+      background-color: #000;
+    }
+    &.current{
+      pointer-events: none;
+    }
+  }
+}
+
+.color-green {
+  color: #a3cd00 !important;
+}
+
+.box-content {
+  box-shadow: 0 2px 7px rgba(46, 25, 0, 0.19);
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 1rem;
+  &.box-content-small {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.box-background {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 2px 7px rgba(46, 25, 0, 0.19);
+  border: 3px solid #fff;
+  transition: border .4s ease-in-out;
+  height: 209px;
+  background-size: cover !important;
+  .box-linear-bg {
+    background-image: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    width: 70%;
+    padding: 0.5rem 1.5rem;
+    height: 100%;
+    &.h-auto {
+      height: auto;
+    }
+  }
+}
+
+.box-title-simple-page {
+  text-transform: none;
+  @include fontSize(56px);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #f37500;
+  line-height: 1;
+}
+
+.box-background.right {
+  border-radius: 8px 70px 8px 8px;
+}
+
+.box-background.left {
+  border-radius: 70px 8px 8px 8px;
+}
+
+.about-section {
+  background: url("../img/about_bg.jpg") no-repeat center;
+  min-height: 599px;
+  background-size: cover;
+  padding: 3rem 0;
+  .box-about {
+    padding: 2.25rem;
+    color: #c5c5c5;
+    background-color: rgba(0, 0, 0, .85);
+    border-radius: 8px;
+  }
+  .full-text {
+    display: none;
+  }
+  .readmore {
+    font-size: 1rem;
+    color: $orange;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: opacity .4s ease-in-out;
+    span {
+      opacity: 1;
+    }
+    &:after {
+      content: '';
+      background: url("../img/icons/arrow.png") no-repeat center;
+      width: 31px;
+      height: 16px;
+      display: block;
+      transition: transform .4s ease-in-out;
+      margin: 10px auto;
+    }
+    &.open {
+      span {
+        opacity: 0;
+      }
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.title {
+  color: $orange;
+  font-weight: 600;
+}
+
+.title.size-xl {
+  font-size: 1.75rem;
+}
+
+.brown-line {
+  background-color: $brown;
+  height: 1px;
+  width: 100%;
+}
+
+.breadcrumbs {
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+}
+
+.woocommerce-breadcrumb,
+.woocommerce-breadcrumb a {
+  @include fontSize(14px);
+  color: #fff;
+  font-weight: 500;
+}
+
+.content-page {
+  margin-top: -524px;
+  border-radius: 8px 8px 17px 17px;
+  background-color: #e4e4e4;
+  padding: 10px 15px;
+  min-height: 524px;
+}
+
+.content-page.content-compare {
+  background-color: #fff;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: $orange;
+  transition: background .4s ease-in-out;
+}
+
+.banner-carousel img {
+  border-radius: 8px;
+  box-shadow: 0 2px 7px rgba(46, 25, 0, 0.19);
+  border: 2px solid #fff;
+  margin-bottom: 15px;
+}
+
+.section-banner-carousel {
+  margin-top: 2rem;
+}
+
+.gallery-fancybox {
+  cursor: pointer;
+}
+
+.certificates .owl-carousel .owl-nav button.owl-next,
+.certificates .owl-carousel .owl-nav button.owl-prev {
+  background-color: #f37500;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  top: 40%;
+  bottom: 0;
+  position: absolute;
+}
+.certificates .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+.certificates .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+
+@media (max-width: 991px) {
+  .content-page {
+    margin-top: -477px;
+  }
+  .title.size-xl {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-content {
+    &.box-content-small {
+      .title {
+        font-size: 1rem;
+      }
+    }
+  }
+  .box-background {
+    height: 155px;
+  }
+  .box-title-simple-page {
+    font-size: 2.3rem;
+  }
+  .about-section .box-about {
+    padding: 1.5rem;
+  }
+  .box-background .box-linear-bg {
+    width: 100%;
+  }
+}

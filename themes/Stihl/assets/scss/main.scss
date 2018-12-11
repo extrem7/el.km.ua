@@ -1,0 +1,94 @@
+/*import bootstrap*/
+@import '../node_modules/bootstrap/scss/bootstrap';
+$fa-font-path:        "../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../node_modules/nouislider/distribute/nouislider.min.css';
+@import '../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+@import '../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
+@import '../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css';
+/*import variables*/
+@import 'helpers/animate';
+@import 'helpers/variables';
+/*import reset*/
+@import 'helpers/reset';
+/*import base*/
+@import 'helpers/base';
+/*import general*/
+@import 'helpers/general';
+/*import mixin*/
+@import 'helpers/mixins';
+/*import general*/
+@import 'helpers/form';
+/*import layouts*/
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/card';
+/*import pages*/
+@import 'pages/home';
+@import 'pages/catalog';
+@import 'pages/product';
+@import 'pages/compare';
+@import 'pages/contact';
+@import 'pages/pages';
+@import 'pages/sale';
+@import 'pages/cart';
+@import 'pages/service';//
+
+
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+  padding: 1em 2em 1em 3.5em;
+  margin: 1em 0 2em;
+  position: relative;
+  background-color: white;
+  // color: $secondarytext;
+  border-top: 3px solid $orange-dark;
+  list-style: none outside;
+  //@include clearfix();
+  width: auto;
+  word-wrap: break-word;
+
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: fa-content($fa-var-shopping-cart);
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 35px;
+    left: 1em;
+  }
+
+  .button {
+    float: right;
+  }
+  a {
+    color: $orange-dark;
+  }
+
+  li {
+    list-style: none outside !important; // Required for default theme compatibility
+    padding-left: 0 !important; // Required for default theme compatibility
+    margin-left: 0 !important; // Required for default theme compatibility
+  }
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 1em 1em 1em 2.5em;
+    &:before{
+      left: 15px;
+    }
+  }
+}
+
+.woocommerce-result-count,.woocommerce-ordering{
+  display: none;
+}

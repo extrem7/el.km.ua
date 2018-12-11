@@ -1,0 +1,125 @@
+.contact-page {
+  .map {
+    border-radius: 8px;
+    iframe {
+      width: 100%;
+      height: 440px;
+    }
+  }
+  .nopr {
+    padding-right: 0;
+  }
+  .nopl {
+    padding-left: 0;
+  }
+  .box-background {
+    height: auto;
+  }
+  .shop-slider {
+    .owl-carousel .owl-item img {
+      max-height: 330px;
+      height: 330px;
+    }
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+      background-color: #f37500;
+      width: 38px;
+      height: 38px;
+      position: relative;
+      border-radius: 50%;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+      .owl-theme .owl-nav {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+  }
+  a {
+    color: $orange;
+  }
+  .white-color {
+    color: #fff;
+  }
+  address {
+    .shop-title {
+      color: #fff;
+      font-weight: 600;
+    }
+    &+address {
+      margin-bottom: 1rem;
+    }
+  }
+  .shop-info {
+    background-color: #000;
+    padding: 2rem;
+    height: 100%;
+    .shop-title {
+      @include fontSize(27px);
+    }
+  }
+  .shop-info-text {
+    color: $orange;
+    @include fontSize(19px);
+    a + span {
+      color: #474747;
+    }
+    .shop-title {
+      @include fontSize(20px);
+    }
+    &+.shop-info-text {
+      margin-top: 1rem;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .contact-page .shop-info-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-page .shop-slider .owl-carousel .owl-item img {
+    max-height: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .contact-page {
+    .xs-flex-column {
+      flex-direction: column;
+      justify-content: center!important;
+      align-items: center!important;
+      margin-bottom: 1rem;
+      > .d-flex {
+        margin-bottom: 0.8rem;
+      }
+    }
+    .xs-justify-center {
+      justify-content: center;
+      margin-bottom: 0.8rem;
+    }
+    .nopr {
+      padding-right: 15px;
+    }
+    .shop-info {
+      padding: 1rem;
+      .shop-title {
+        font-size: 1.2rem;
+      }
+    }
+    .shop-title {
+      text-align: center;
+    }
+    .ml-5 {
+      margin-left: 0!important;
+    }
+    .shop-info-text + .shop-info-text {
+      margin-top: 0;
+    }
+  }
+}

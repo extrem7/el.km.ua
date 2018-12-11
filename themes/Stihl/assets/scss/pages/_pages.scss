@@ -1,0 +1,58 @@
+.delivery-contact.contact-page .shop-info-text {
+  font-size: 1rem;
+}
+.content-simple-page {
+  @include fontSize(18px);
+  h2,h3,h4,h5,h6 {
+    @include fontSize(18px);
+    color: $orange;
+    display: inline-block;
+    font-weight: 700;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  .box-background {
+    margin-bottom: 1.2rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .alignleft {
+    display: block;
+    float: left;
+    margin: 20px 20px 0 0;
+  }
+  .alignright {
+    display: block;
+    float: right;
+    margin: 20px 0 0 20px;
+  }
+  .certificates {
+    .box-content {
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .content-simple-page {
+    font-size: 1rem;
+    h2,h3,h4,h5,h6 {
+      font-size: 1rem;
+    }
+  }
+  .content-simple-page .alignright,
+  .content-simple-page .alignleft {
+    float:none;
+    margin: 1rem auto;
+  }
+}
+@media (max-width: 768px) {
+  .content-simple-page .box-title {
+    font-size: 2rem;
+  }
+}

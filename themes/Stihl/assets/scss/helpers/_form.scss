@@ -1,0 +1,93 @@
+.control-form {
+  border: 1px solid #dedede;
+  height: 34px;
+  border-radius: 8px;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    border-color: $orange-dark;
+  }
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
+
+.btn-orange {
+  display: inline-block;
+  background-color: $orange;
+  border: 1px solid #ffffff;
+  text-align: center;
+  border-radius: 4px;
+  @include fontSize(17px);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.21);
+  padding: 0.4rem;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.38);
+    transform: translateY(-3px);
+  }
+}
+
+.custom-control-label {
+  outline: none;
+}
+
+.btn-ajax{
+  min-height: 31px;
+  position: relative;
+  &.ajaxLoad:after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+
+    font-family: 'Font Awesome 5 Free';
+    content: fa-content($fa-var-spinner);
+    font-weight: bold;
+    animation: fa-spin .75s linear infinite;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+}
+
+.add-to-cart {
+  display: inline-block;
+  border-radius: 8px;
+  background-color: $orange;
+  border: 2px solid #ffffff;
+  @include fontSize(18px);
+  font-weight: 600;
+  color: #fff;
+  padding: 0.3rem;
+  width: 138px;
+  min-height: 41px;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.38);
+    transform: translateY(-3px);
+  }
+}
+
+.label-form {
+  font-size: 1rem;
+  color: #5b5b5b;
+  font-weight: 600;
+}
